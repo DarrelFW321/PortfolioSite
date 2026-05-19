@@ -3,11 +3,11 @@ import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Darrel Wihandi",
+  title: "Darrel Wihandi — Portfolio",
   description:
     "Software Engineer & AI/ML Builder. BSE Software Engineering at the University of Waterloo.",
   openGraph: {
-    title: "Darrel Wihandi",
+    title: "Darrel Wihandi — Portfolio",
     description: "Software Engineer & AI/ML Builder",
     type: "website",
   },

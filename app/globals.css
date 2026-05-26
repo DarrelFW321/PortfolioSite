@@ -398,16 +398,44 @@ footer {
 
 /* ── Mobile ── */
 @media (max-width: 600px) {
+  .page { padding: 0 1.25rem; }
+
+  /* Nav — show all links, tighter */
+  nav { padding: 1.5rem 0 0; }
+  .nav-links { gap: 1rem; }
+  .nav-links a { font-size: 0.75rem; }
+
+  /* Hero — less vertical space */
+  .hero { padding: 3rem 0 2.5rem; }
+  .hero h1 { font-size: 1.4rem; }
+
+  /* Sections — less padding */
+  section { padding: 2.25rem 0; }
+
+  /* Experience — stack date above content */
   .exp-item {
     grid-template-columns: 1fr;
-    gap: 0.5rem;
+    gap: 0.3rem;
   }
 
-  .nav-links a:not(:last-child) { display: none; }
+  /* Projects — stack name and type */
+  .project-header {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
 
-  .hero h1 { font-size: 1.5rem; }
-
-  .skills-line { flex-direction: column; gap: 0.4rem; }
-
+  /* Skills — stack label above tags */
+  .skills-line { flex-direction: column; gap: 0.35rem; }
   .skills-group-label { width: auto; }
+
+  /* Contact — prevent email overflow */
+  .contact-link-val {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 160px;
+  }
+
+  /* Footer — stack on very small */
+  .footer-inner { flex-direction: column; gap: 0.4rem; align-items: flex-start; }
 }

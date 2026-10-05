@@ -1,20 +1,28 @@
+import { contact } from "@/lib/data";
+
 export default function Hero() {
   return (
     <div className="hero fade">
-      <h1>
-        Software Engineer &<br />
-        AI/ML Builder
-      </h1>
+      <h1>Darrel Wihandi</h1>
       <p>
-        2nd-year Software Engineering @ Waterloo. AI systems, dev tools, and
-        shipped full-stack products — LLMs, RAG, agents.
+        Software engineer working on systems, compilers, and AI infrastructure.
+        3rd-year Software Engineering @ Waterloo.
+      </p>
+      <p className="hero-now">
+        <span className="dot" />
+        Currently SWE intern @ Carta · contributing to NVIDIA&apos;s Slang compiler
       </p>
       <div className="hero-links">
-        <a href="#contact" className="pill pill-primary">
-          Get in touch
+        <a
+          href={contact.resume}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="pill pill-primary"
+        >
+          Resume ↗
         </a>
         <a
-          href="https://github.com/DarrelFW321"
+          href={contact.github.url}
           target="_blank"
           rel="noopener noreferrer"
           className="pill"
@@ -22,12 +30,15 @@ export default function Hero() {
           GitHub ↗
         </a>
         <a
-          href="https://linkedin.com/in/darrel-wihandi"
+          href={contact.linkedin.url}
           target="_blank"
           rel="noopener noreferrer"
           className="pill"
         >
           LinkedIn ↗
+        </a>
+        <a href={`mailto:${contact.email}`} className="pill">
+          Email
         </a>
       </div>
     </div>

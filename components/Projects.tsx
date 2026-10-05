@@ -7,7 +7,21 @@ export default function Projects() {
       <div className="section-label">Projects</div>
       {projects.map((project) => (
         <div key={project.name} className="project-item">
-          {project.image && (
+          {project.video ? (
+            <div className="project-image-wrap">
+              <video
+                src={project.video}
+                poster={project.image}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                aria-label={`${project.name} demo video`}
+                className="project-image"
+              />
+            </div>
+          ) : project.image && (
             <div className="project-image-wrap">
               <Image
                 src={project.image}
@@ -21,10 +35,7 @@ export default function Projects() {
             </div>
           )}
           <div className="project-header">
-            <span className="project-name">
-              {project.active && <span className="project-active-dot" />}
-              {project.name}
-            </span>
+            <span className="project-name">{project.name}</span>
             <span className="project-type">{project.type}</span>
           </div>
           <p className="project-desc">{project.desc}</p>

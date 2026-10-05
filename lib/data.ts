@@ -4,6 +4,7 @@ export interface Experience {
   company: string;
   desc: string;
   tags: string[];
+  current?: boolean;
   link?: string;
 }
 
@@ -15,77 +16,95 @@ export interface Project {
   link?: string;
   liveLink?: string;
   liveLinkLabel?: string;
-  active?: boolean;
   image?: string;
+  video?: string;
 }
 
 export const experience: Experience[] = [
   {
+    date: "Sept 2026 – now",
+    role: "Software Engineering Intern",
+    company: "Carta",
+    desc: "Self-service enterprise SSO with C++ gRPC APIs and SCIM provisioning, replacing staff-assisted setup.",
+    tags: ["C++", "Python", "gRPC", "PostgreSQL", "Redis"],
+    current: true,
+  },
+  {
+    date: "May 2026 – now",
+    role: "Machine Learning Systems Engineer",
+    company: "Wat.AI — TRACE",
+    desc: "Reliability framework that pinpoints failures in multi-step AI agent workflows and turns them into reproducible test cases.",
+    tags: ["Python", "LangGraph", "OpenTelemetry", "SQLite"],
+    current: true,
+  },
+  {
+    date: "Feb 2025 – now",
+    role: "Graphics Compiler Engineer",
+    company: "NVIDIA — Open Source Contributor",
+    desc: "Texture intrinsics and cross-backend validation tests in the Slang GPU shading compiler across SPIR-V, HLSL, WGSL, and CUDA.",
+    tags: ["C++", "SPIR-V", "HLSL", "WGSL", "CUDA"],
+    current: true,
+    link: "https://github.com/shader-slang/slang",
+  },
+  {
     date: "Jan – May 2026",
     role: "ML / Gen AI Software Engineer",
     company: "Rogers Communications",
-    desc: "RAG pipeline + Azure OpenAI to auto-generate metadata descriptions across Rogers' 4M-asset data catalog, cutting authoring time 67%.",
-    tags: ["Python", "Azure OpenAI", "LangChain", "FastAPI", "React", "RAG"],
+    desc: "AI metadata enrichment platform with RAG and human review, plus a spectrum acquisition pipeline for the strategy team.",
+    tags: ["Python", "Azure OpenAI", "LangChain", "FastAPI"],
   },
   {
     date: "May – Aug 2025",
     role: "AI/ML Engineer & DevOps Intern",
     company: "Eon Media",
-    desc: "GPU video analytics pipelines on AWS EKS with YOLO/DeepSort and LLMs; automated CI/CD cutting deployment overhead 50%.",
-    tags: ["Python", "AWS EKS", "Kubernetes", "YOLO", "DeepSort"],
-  },
-  {
-    date: "Feb 2025 – now",
-    role: "Graphics Compiler Engineer",
-    company: "Khronos Group / Nvidia — Open Source",
-    desc: "Implementing texture intrinsics and validation tests in the Slang GPU shading compiler across SPIR-V, HLSL, WGSL, and CUDA.",
-    tags: ["C++", "SPIR-V", "HLSL", "WGSL", "CUDA"],
-    link: "https://github.com/shader-slang/slang",
+    desc: "GPU video analytics pipelines on AWS EKS for live sports footage (YOLO/DeepSort, OCR, LLMs), plus CI/CD and cloud infrastructure automation.",
+    tags: ["Python", "AWS", "Kubernetes", "YOLO"],
   },
 ];
 
 export const projects: Project[] = [
   {
+    name: "Dex",
+    type: "Hack the North 2026",
+    desc: "AI agent that redesigns LiDAR-scanned rooms from voice commands and shows them in AR, with on-device collision and clearance validation.",
+    tags: ["TypeScript", "React Native", "Swift", "Three.js"],
+    liveLink: "https://dex-reality-editor.vercel.app/",
+    link: "https://github.com/DarrelFW321/RealityEditor",
+    image: "/images/dex.jpg",
+    video: "/videos/dex.mp4",
+  },
+  {
     name: "Flux",
-    type: "Compilers · WebAssembly",
-    desc: "Statically typed DSL for ML numerical kernels with a full compiler pipeline — lexer, parser, AST, FluxIR, MIR optimization passes (constant folding, loop fusion, DCE), and LLVM-backed native codegen. Frontend compiled to WASM via Emscripten for live in-browser pipeline visualization.",
-    tags: ["C++17", "LLVM", "WebAssembly", "React", "FastAPI"],
+    type: "Compilers",
+    desc: "Statically typed DSL for ML numerical kernels — lexer, parser, type checker, custom IR, optimization passes, and LLVM codegen, benchmarked against C and NumPy. Runs in the browser via WebAssembly with a live pipeline visualizer.",
+    tags: ["C++17", "LLVM", "WebAssembly", "React"],
     liveLink: "https://darrelfw321.github.io/Flux/",
-    liveLinkLabel: "Live Demo",
-    active: true,
+    link: "https://github.com/DarrelFW321/Flux",
     image: "/images/flux.png",
   },
   {
     name: "Aerix",
-    type: "SaaS · Web Scraping",
-    desc: "Turns a URL + plain-English prompt into a live structured JSON endpoint. Self-healing scraper validated across 1,000+ endpoints; early signups acquired.",
-    tags: ["Next.js", "FastAPI", "Playwright", "PostgreSQL", "Redis", "Gemini", "Docker"],
+    type: "SaaS",
+    desc: "Turns a URL and a plain-English prompt into a live JSON API. Caches browser-navigation plans and rediscovers extraction paths when sites change.",
+    tags: ["Next.js", "FastAPI", "Playwright", "PostgreSQL", "Gemini"],
     liveLink: "https://aerix5.com",
     liveLinkLabel: "aerix5.com",
-    active: true,
     image: "/images/aerix.png",
   },
   {
     name: "RISC-V Web Emulator",
-    type: "Systems · WebAssembly",
-    desc: "Browser-based RISC-V emulator in C++/WASM with real-time register and memory visualization. Adopted as a classroom tool at Waterloo.",
+    type: "Systems",
+    desc: "Browser-based RISC-V emulator in C++/WASM with live register and memory views. Adopted as a classroom tool at Waterloo.",
     tags: ["C++", "WebAssembly", "JavaScript"],
     liveLink: "https://riscv-emulator-beta.vercel.app/",
-    liveLinkLabel: "Live Demo",
-    active: true,
+    link: "https://github.com/DarrelFW321/riscv-emulator",
     image: "/images/riscv.png",
   },
 ];
-
-export const skills: Record<string, string[]> = {
-  "AI / ML": ["LangChain", "RAG", "Azure OpenAI", "LLM Fine-tuning", "YOLO", "Qdrant", "LoRA", "Ollama"],
-  Languages: ["Python", "TypeScript", "C++", "JavaScript", "Java", "HLSL", "SQL"],
-  Frameworks: ["FastAPI", "Next.js", "React", "Flask", "Node.js", "WebAssembly"],
-  Infra: ["AWS", "Kubernetes", "Docker", "PostgreSQL", "Redis", "Azure"],
-};
 
 export const contact = {
   email: "dfwihand@uwaterloo.ca",
   github: { label: "DarrelFW321", url: "https://github.com/DarrelFW321" },
   linkedin: { label: "Darrel Wihandi", url: "https://linkedin.com/in/darrel-wihandi" },
+  resume: "/resume.pdf",
 };

@@ -2,6 +2,7 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
+import CommitHistory from "@/components/CommitHistory";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ScrollAnimator from "@/components/ScrollAnimator";
@@ -15,6 +16,8 @@ export default function Page() {
       <Experience />
       <hr />
       <Projects />
+      <hr />
+      <CommitHistory />
       <hr />
       <Contact />
       <Footer />

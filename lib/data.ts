@@ -138,12 +138,17 @@ export const projects: Project[] = [
   {
     name: "Flux",
     date: "Feb – Mar 2026",
-    type: "Compilers",
-    bullets: ["a small language and compiler for numerical kernels, built in C++ with LLVM.", "a browser visualizer for exploring compiler stages and comparing generated code with C and NumPy."],
-    tags: ["C++", "LLVM", "WebAssembly", "React"],
+    type: "Shader Compiler & Playground",
+    bullets: ["a typed shader language and compiler in C++, with a custom IR, optimization passes, and WGSL / SPIR-V backends.", "a live WebGPU playground to edit shaders, preview the result, and explore how each change moves through the compiler."],
+    tags: ["C++", "SPIR-V", "WGSL", "WebGPU", "WebAssembly"],
     liveLink: "https://darrelfw321.github.io/Flux/",
+    liveLinkLabel: "Live Playground",
     link: "https://github.com/DarrelFW321/Flux",
-    image: "/images/flux.png",
+    image: "/images/flux-playground.png",
+    media: [
+      { label: "Still", src: "/images/flux-playground.png", alt: "Flux WebGPU playground with shader source, a live preview, and compiler output" },
+      { label: "Demo", src: "/images/flux-demo.gif", alt: "Editing a Flux shader as the WebGPU preview, diagnostics, WGSL, SPIR-V, and IR update live" },
+    ],
   },
   {
     name: "Aerix",

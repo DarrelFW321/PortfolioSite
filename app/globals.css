@@ -380,7 +380,7 @@ footer {
 .media-controls button:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
 .project-date { color: var(--muted); font-size: 0.75rem; margin-bottom: 0.5rem; }
 .project-gallery .project-image-wrap { aspect-ratio: 16 / 9; }
-.project-gallery .project-image { height: 100% !important; object-fit: cover; }
+.project-gallery .project-image { height: 100% !important; object-fit: contain; }
 
 .description-list { padding-left: 1.1rem; list-style: disc; }
 .description-list li + li { margin-top: 0.3rem; }

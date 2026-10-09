@@ -27,7 +27,7 @@ export const experience: Experience[] = [
     "date": "Sept 2026 – now",
     "role": "Software Engineering Intern",
     "company": "Carta",
-    bullets: ["self-service enterprise sign-in and account provisioning, built with C++ and gRPC.", "python tooling to test authentication and access changes across services."],
+    bullets: ["Built tools for customers to set up company sign-in and manage employee access.", "Created automated tests for sign-in and account updates across services."],
     "tags": [
       "C++",
       "Python",
@@ -41,7 +41,7 @@ export const experience: Experience[] = [
     "date": "Feb 2025 – now",
     "role": "Graphics Compiler Contributor",
     "company": "NVIDIA Slang — Open Source",
-    bullets: ["open-source work on Slang, focused on texture queries and shader code generation.", "debugging differences between SPIR-V and WGSL backends, with regression tests to keep them consistent."],
+    bullets: ["Contributed to Slang, an open-source compiler for GPU shaders.", "Improved how shaders read texture dimensions and tested the generated code across graphics targets."],
     "tags": [
       "C++",
       "Slang",
@@ -55,7 +55,7 @@ export const experience: Experience[] = [
     "date": "May – Oct 2026",
     "role": "Machine Learning Systems Engineer",
     "company": "Wat.AI — TRACE",
-    bullets: ["trace analysis and state validation to figure out where AI-agent workflows go wrong.", "turning failures into reproducible tests and replaying them in CI."],
+    bullets: ["Built tools to identify where AI agents fail during multi-step tasks.", "Turned failures into repeatable tests to check fixes and catch recurring issues."],
     "tags": [
       "Python",
       "OpenTelemetry",
@@ -66,7 +66,7 @@ export const experience: Experience[] = [
     "date": "Jan – May 2026",
     "role": "AI Software Engineer",
     "company": "Rogers Communications",
-    bullets: ["AI-assisted catalog descriptions, with business context and human review.", "data pipelines that help the strategy team evaluate spectrum acquisition opportunities."],
+    bullets: ["Built an AI-assisted tool to draft and review descriptions for an internal data catalog.", "Combined regulatory and customer data to help the strategy team evaluate wireless spectrum opportunities."],
     "tags": [
       "Python",
       "Azure OpenAI",
@@ -77,7 +77,7 @@ export const experience: Experience[] = [
     "date": "May – Aug 2025",
     "role": "Software Engineer",
     "company": "Eon Media",
-    bullets: ["GPU video processing for sports analytics, including CUDA preprocessing ahead of object detection.", "deployment and automation for video services running on AWS and Kubernetes."],
+    bullets: ["Developed GPU processing to prepare sports video for object detection.", "Deployed video services on AWS and automated their build and release workflows."],
     "tags": [
       "C++",
       "CUDA",
@@ -92,7 +92,7 @@ export const projects: Project[] = [
   "name": "Nimbus",
   "type": "Real-Time Volumetric Renderer",
   "date": "Mar – May 2026",
-  bullets: ["a Vulkan renderer for ray-marched clouds, changing skies, and dynamic lighting.", "profiling and optimizing the GPU pipeline with adaptive ray marching and temporal reconstruction."],
+  bullets: ["Renders clouds and skies in real time, with changing weather and lighting.", "Reuses rendering work between frames to make detailed clouds faster to draw."],
   "tags": [
     "C++",
     "Vulkan",
@@ -128,7 +128,7 @@ export const projects: Project[] = [
   {
     name: "Dex",
     type: "Hack the North 2026",
-    bullets: ["talk to an AI agent to redesign a scanned room and preview the changes in AR.", "built at Hack the North, with geometry checks to keep furniture clear of walls and doors."],
+    bullets: ["Uses voice commands to redesign scanned rooms and preview changes in augmented reality.", "Checks furniture placement for collisions and blocked doorways."],
     tags: ["TypeScript", "React Native", "Swift", "Three.js"],
     liveLink: "https://dex-reality-editor.vercel.app/",
     link: "https://github.com/DarrelFW321/RealityEditor",
@@ -139,7 +139,7 @@ export const projects: Project[] = [
     name: "Flux",
     date: "Feb – Mar 2026",
     type: "Shader Compiler & Playground",
-    bullets: ["a typed shader language and compiler in C++, with a custom IR, optimization passes, and WGSL / SPIR-V backends.", "a live WebGPU playground to edit shaders, preview the result, and explore how each change moves through the compiler."],
+    bullets: ["A shader language and compiler for writing programs that run on the GPU.", "Includes a browser playground to edit shaders, preview visuals, and inspect the compiled code."],
     tags: ["C++", "SPIR-V", "WGSL", "WebGPU", "WebAssembly"],
     liveLink: "https://darrelfw321.github.io/Flux/",
     liveLinkLabel: "Live Playground",
@@ -152,8 +152,8 @@ export const projects: Project[] = [
   },
   {
     name: "Aerix",
-    type: "SaaS",
-    bullets: ["turn a URL and a plain-english prompt into a reusable JSON API.", "cached browser plans that adapt when the source website changes."],
+    type: "Web Data Extraction",
+    bullets: ["Turns a website and a description of the data you need into a reusable API.", "Refreshes extracted data and adapts when the source website changes."],
     tags: ["Next.js", "FastAPI", "Playwright", "PostgreSQL", "Gemini"],
     liveLink: "https://aerix5.com",
     liveLinkLabel: "aerix5.com",
@@ -161,8 +161,8 @@ export const projects: Project[] = [
   },
   {
     name: "RISC-V Web Emulator",
-    type: "Systems",
-    bullets: ["a RISC-V emulator that runs in the browser through WebAssembly.", "live register and memory views, used as a classroom tool at Waterloo."],
+    type: "Browser-Based Emulator",
+    bullets: ["Runs RISC-V programs directly in the browser.", "Shows register and memory changes to help students understand how programs execute."],
     tags: ["C++", "WebAssembly", "JavaScript"],
     liveLink: "https://riscv-emulator-beta.vercel.app/",
     link: "https://github.com/DarrelFW321/riscv-emulator",

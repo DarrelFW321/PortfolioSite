@@ -21,7 +21,9 @@ export default function Experience() {
                 item.company
               )}
             </div>
-            <p className="exp-desc">{item.desc}</p>
+            <ul className="exp-desc description-list">
+              {item.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
+            </ul>
             <div className="exp-tags">
               {item.tags.map((tag) => (
                 <span key={tag} className="tag">

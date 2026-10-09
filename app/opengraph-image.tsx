@@ -22,7 +22,7 @@ export default function OpengraphImage() {
         Darrel Wihandi
       </div>
       <div style={{ color: "#888", fontSize: 36, marginTop: 24 }}>
-        Systems, compilers & AI infrastructure
+        Graphics, compilers & GPU systems
       </div>
       <div style={{ color: "#555", fontSize: 28, marginTop: 48 }}>
         Software Engineering @ Waterloo

@@ -5,7 +5,7 @@ export default function Hero() {
     <div className="hero fade">
       <h1>Darrel Wihandi</h1>
       <p>
-        Software engineer working on systems, compilers, and AI infrastructure.
+        Software engineer working on graphics, compilers, and GPU systems.
         3rd-year Software Engineering @ Waterloo.
       </p>
       <p className="hero-now">

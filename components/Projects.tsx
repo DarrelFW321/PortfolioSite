@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ProjectMedia from "./ProjectMedia";
 import { projects } from "@/lib/data";
 
 export default function Projects() {
@@ -7,7 +8,9 @@ export default function Projects() {
       <div className="section-label">Projects</div>
       {projects.map((project) => (
         <div key={project.name} className="project-item">
-          {project.video ? (
+          {project.media ? (
+            <ProjectMedia name={project.name} media={project.media} />
+          ) : project.video ? (
             <div className="project-image-wrap">
               <video
                 src={project.video}
@@ -38,7 +41,10 @@ export default function Projects() {
             <span className="project-name">{project.name}</span>
             <span className="project-type">{project.type}</span>
           </div>
-          <p className="project-desc">{project.desc}</p>
+          {project.date && <p className="project-date">{project.date}</p>}
+          <ul className="project-desc description-list">
+            {project.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
+          </ul>
           <div className="project-tags">
             {project.tags.map((tag) => (
               <span key={tag} className="tag">
